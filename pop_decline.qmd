@@ -1,0 +1,48 @@
+---
+title: "Death Rate vs. Birth Rate"
+---
+
+Which countries have death rates higher than birth rates?
+
+This page explores the relationship between the birth rate and death rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico.
+
+```{python}
+import pandas as pd
+import sqlite3
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Connect to sql
+conn = sqlite3.connect('data/wdi_data.db')  
+
+# SQL query
+query = """
+SELECT 
+    country,
+    birth_rate,
+    death_rate,
+    (birth_rate - death_rate) AS circle_of_life
+FROM wdi_data
+WHERE birth_rate IS NOT NULL AND death_rate IS NOT NULL
+ORDER BY circle_of_life ASC;
+"""
+df = pd.read_sql_query(query, conn)
+
+display(pd.read_sql(query, conn))
+
+```
+
+```{python}
+plt.figure(figsize=(12, 6))
+sns.barplot(
+    data=df_melted, 
+    x='country', y='rate', 
+    hue='rate_type'
+)
+
+plt.title('Birth Rate vs Death Rate by Country')
+plt.ylabel('Rate per 1,000 People')
+plt.xlabel('Country')
+plt.tight_layout()
+plt.show()
+```
