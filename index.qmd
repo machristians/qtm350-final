@@ -1,7 +1,28 @@
 ---
-title: "qtm350_finalproject"
+title: "QTM 350 Final Project - Population Dynamics in Latin America"
 ---
 
-This is a Quarto website.
+## Presented By 
+Ahshar Brown - Student Id: 2575182 
+Macy Christians - Student Id: ###### 
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Introduction 
+In this project, we explore population dynamics across several Latin American countries, focusing on Mexico, Colombia, Argentina, and Brazil. These nations were selected for their diverse social, economic, and demographic profiles, offering distinct perspectives on life in Latin America. Through this analysis, we examine how urbanization influences population trends, compare birth and death rates, and investigate other key factors shaping demographic change in the region.
+
+
+## Data Description 
+This project uses data from the World Bank’s World Development Indicators (WDI) database, which includes over 1,600 indicators for more than 200 countries from 1960 to 2023. 
+
+For this analysis, we selected a focused set of population-related indicators to explore key aspects of demographic change, including: 
+- total population
+- population growth 
+- urban and rural population percentages
+- fertility rate 
+- birth and death rates 
+- infant and under-five mortality rates
+- adolescent fertility 
+- net migration 
+- population density 
+- life expectancy
+
+The countries analyzed [Brazil (BRA), Mexico (MEX), Argentina (ARG), and Colombia (COL)] were chosen to reflect a diversity of social and economic conditions within Latin America. 

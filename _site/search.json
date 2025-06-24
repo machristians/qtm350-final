@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "pop_decline.html",
+    "href": "pop_decline.html",
+    "title": "Death Rate vs. Birth Rate",
+    "section": "",
+    "text": "Which countries have death rates higher than birth rates?\nThis page explores the relationship between the birth rate and death rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico."
+  },
+  {
+    "objectID": "pop_decline.html#results",
+    "href": "pop_decline.html#results",
+    "title": "Death Rate vs. Birth Rate",
+    "section": "Results",
+    "text": "Results\n\n\n\n\n\n\n\n\n\ncountry\nbirth_rate\ndeath_rate\ncircle_of_life\n\n\n\n\n0\nArgentina\n10.926\n8.797\n2.129\n\n\n1\nBrazil\n12.555\n7.539\n5.016\n\n\n2\nColombia\n13.731\n5.881\n7.850\n\n\n3\nMexico\n16.041\n6.521\n9.520\n\n\n\n\n\n\n\n\n\n\n\n\nBirth Rate vs. Death Rate"
+  },
+  {
+    "objectID": "pop_decline.html#interpretation",
+    "href": "pop_decline.html#interpretation",
+    "title": "Death Rate vs. Birth Rate",
+    "section": "Interpretation",
+    "text": "Interpretation\nAs shown in the graph, none of these countries currently have a death rate that surpasses their birth rate. Colombia and Brazil show comparable differences between birth and death rates, while Argentina’s gap is slightly narrower. Among all 4 countries compared, Mexico exhibits the highest natural population growth, whereas Argentina’s growth is smaller."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "QTM 350 Final Project - Population Dynamics in Latin America",
+    "section": "",
+    "text": "Ahshar Brown - Student Id: 2575182 Macy Christians - Student Id: ######"
+  },
+  {
+    "objectID": "index.html#presented-by",
+    "href": "index.html#presented-by",
+    "title": "QTM 350 Final Project - Population Dynamics in Latin America",
+    "section": "",
+    "text": "Ahshar Brown - Student Id: 2575182 Macy Christians - Student Id: ######"
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "QTM 350 Final Project - Population Dynamics in Latin America",
+    "section": "Introduction",
+    "text": "Introduction\nIn this project, we explore population dynamics across several Latin American countries, focusing on Mexico, Colombia, Argentina, and Brazil. These nations were selected for their diverse social, economic, and demographic profiles, offering distinct perspectives on life in Latin America. Through this analysis, we examine how urbanization influences population trends, compare birth and death rates, and investigate other key factors shaping demographic change in the region."
+  },
+  {
+    "objectID": "index.html#data-description",
+    "href": "index.html#data-description",
+    "title": "QTM 350 Final Project - Population Dynamics in Latin America",
+    "section": "Data Description",
+    "text": "Data Description\nThis project uses data from the World Bank’s World Development Indicators (WDI) database, which includes over 1,600 indicators for more than 200 countries from 1960 to 2023.\nFor this analysis, we selected a focused set of population-related indicators to explore key aspects of demographic change, including: - total population - population growth - urban and rural population percentages - fertility rate - birth and death rates - infant and under-five mortality rates - adolescent fertility - net migration - population density - life expectancy\nThe countries analyzed [Brazil (BRA), Mexico (MEX), Argentina (ARG), and Colombia (COL)] were chosen to reflect a diversity of social and economic conditions within Latin America."
+  },
+  {
+    "objectID": "pop_growth.html",
+    "href": "pop_growth.html",
+    "title": "Urbanization vs. Population Growth",
+    "section": "",
+    "text": "Do more urbanized countries experience higher population growth?\nThis page explores the relationship between the urbanization rate and population growth rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico. It compares how different levels of urban development may lead to differences in population growth."
+  },
+  {
+    "objectID": "pop_growth.html#results",
+    "href": "pop_growth.html#results",
+    "title": "Urbanization vs. Population Growth",
+    "section": "Results",
+    "text": "Results\n\n\n\n\n\n\n\n\n\ncountry\nurban_population_percent\nrural_population_percent\npopulation_growth\n\n\n\n\n0\nColombia\n82.050\n17.950\n1.068293\n\n\n1\nArgentina\n92.347\n7.653\n0.210809\n\n\n2\nMexico\n81.300\n18.700\n0.753117\n\n\n3\nBrazil\n87.555\n12.445\n0.360181\n\n\n\n\n\n\n\n\n\n\n\n\nUrbanization vs. Population Growth"
+  },
+  {
+    "objectID": "pop_growth.html#interpretation",
+    "href": "pop_growth.html#interpretation",
+    "title": "Urbanization vs. Population Growth",
+    "section": "Interpretation",
+    "text": "Interpretation\nAs shown by the graph, countries with a higher urban population tend to have lower population growth rates, while those with a lower urban population have higher growth rates. Specifically, Mexico and Colombia, which have urban populations below 83%, both exhibit population growth rates above 70%. In contrast, Brazil and Argentina, with urban populations exceeding 85%, have population growth rates below 50%. This suggests an inverse relationship between urbanization and population growth among these countries."
+  },
+  {
+    "objectID": "conclusion.html",
+    "href": "conclusion.html",
+    "title": "Conclusion",
+    "section": "",
+    "text": "In Conclusion, …."
+  },
+  {
+    "objectID": "conclusion.html#conclusion",
+    "href": "conclusion.html#conclusion",
+    "title": "Conclusion",
+    "section": "",
+    "text": "In Conclusion, …."
+  },
+  {
+    "objectID": "data/finaldata.html",
+    "href": "data/finaldata.html",
+    "title": "Population Dynamics in Latin America",
+    "section": "",
+    "text": "from wbgapi import data as wbdata\nimport pandas as pd\n\n# Define indicators\npopulation_indicators = {\n    'total_population': 'SP.POP.TOTL',\n    'population_growth': 'SP.POP.GROW',\n    'urban_population_percent': 'SP.URB.TOTL.IN.ZS',\n    'rural_population_percent': 'SP.RUR.TOTL.ZS',\n    'fertility_rate': 'SP.DYN.TFRT.IN',\n    'birth_rate': 'SP.DYN.CBRT.IN',\n    'death_rate': 'SP.DYN.CDRT.IN',\n    'infant_mortality_rate': 'SP.DYN.IMRT.IN',\n    'under_5_mortality_rate': 'SH.DYN.MORT',\n    'adolescent_fertility_rate': 'SP.ADO.TFRT',\n    'net_migration': 'SM.POP.NETM',\n    'population_density': 'EN.POP.DNST',\n    'life_expectancy': 'SP.DYN.LE00.IN'\n}\n\n# Countries\ncountry_codes = ['BRA', 'MEX', 'ARG', 'COL']\n\n# Download wide-format data for 2022\ndf = wbdata.DataFrame(\n    population_indicators.values(),\n    economy=country_codes,\n    time=2022,\n    skipBlanks=True,\n    labels=True\n).reset_index()\n\n# Drop unwanted columns (if any)\ndf.drop(columns=['economy'], errors='ignore', inplace=True)\n\n# Rename columns using your friendly keys\ndf.rename(columns=lambda x: {v: k for k, v in population_indicators.items()}.get(x, x).lower(), inplace=True)\n\n# Save to CSV\ndf.to_csv('wdi_population_.csv', index=False)\n\n\nimport sqlite3\n\n# Connect to or create the database\nconn = sqlite3.connect('wdi_data.db')\n\n# Load CSV into DataFrame\ndf = pd.read_csv('wdi_population_.csv')\n\n# Write the data to SQL\ndf.to_sql('wdi_data', conn, if_exists='replace', index=False)\n\n4\n\n\n\nimport pandas as pd\n\ndf = pd.read_csv('wdi_population_.csv')\nprint(df.columns)\n\nIndex(['country', 'population_density', 'under_5_mortality_rate',\n       'net_migration', 'adolescent_fertility_rate', 'birth_rate',\n       'death_rate', 'infant_mortality_rate', 'life_expectancy',\n       'fertility_rate', 'population_growth', 'total_population',\n       'rural_population_percent', 'urban_population_percent'],\n      dtype='object')"
+  }
+]
