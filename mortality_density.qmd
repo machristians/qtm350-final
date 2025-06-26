@@ -1,10 +1,12 @@
 ---
-title: "Fertility rates among adolescents"
+title: "Child mortality rate vs. Population density"
 ---
 
-Which countries have a disproportionately high adolescent fertility rate?
+Is there a trend between child mortality rate and population density?
 
-This page explores the patterns of fertility rate (overall, and just among adolescents) in four Latin American countries: Colombia, Brazil, Argentina, and Mexico.
+Which countries have an outlying child mortality rate?
+
+This page explores the patterns of child mortality rate vs. population density in four Latin American countries: Colombia, Brazil, Argentina, and Mexico.
 
 ## Results 
 ```{python}
@@ -26,7 +28,8 @@ SELECT
     population_density,
     under_5_mortality_rate
 FROM wdi_data
-WHERE population_density IS NOT NULL AND under_5_mortality_rate IS NOT NULL;
+WHERE population_density IS NOT NULL AND under_5_mortality_rate IS NOT NULL
+ORDER BY under_5_mortality_rate;
 """
 df = pd.read_sql_query(query, conn)
 
@@ -38,7 +41,7 @@ display(pd.read_sql(query, conn))
 #| label: natural_rate_barplot
 #| echo: false
 #| eval: true
-#| fig-cap: "Birth Rate vs. Death Rate "
+#| fig-cap: "Child mortality vs. Population density"
 
 
 
@@ -51,6 +54,7 @@ sns.scatterplot(
     s = 300
 )
 
+plt.grid(True)
 plt.title('Child mortality vs. Population density')
 plt.ylabel('Deaths under 5 y.o. per 1,000 live births')
 plt.xlabel('People per sq. km of land')

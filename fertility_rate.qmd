@@ -39,7 +39,7 @@ display(pd.read_sql(query, conn))
 #| label: natural_rate_barplot
 #| echo: false
 #| eval: true
-#| fig-cap: "Birth Rate vs. Death Rate "
+#| fig-cap: "Fertility rate plot"
 
 
 
@@ -52,6 +52,8 @@ sns.scatterplot(
     s = 300
 )
 
+plt.grid(True)
+plt.xlim(1.4, 2.2)
 plt.title('Adolescent vs. overall fertility rate')
 plt.ylabel('Births per female aged 15-19')
 plt.xlabel('Births per female')
@@ -61,6 +63,6 @@ plt.show()
 ```
 
 ## Interpretation 
-Though it's hard to tell with only four points of comparison, we can see Colombia is somewhat of an outlier in this analysis. Its adolescent fertility rate is disproportionally high compared to its *overall* fertility rate, indicating that Colombians aged 15-19 give birth more than would be expected compared to the rest of the Colombian population.
+Though it's hard to tell with only four points of comparison, we can see Colombia is somewhat of an outlier in this analysis. Its adolescent fertility rate is disproportionately high compared to its *overall* fertility rate, indicating that Colombians aged 15-19 give birth more than would be expected compared to the rest of the Colombian population.
 
 This trend is confirmed in other studies, which attributes the high adolescent fertility, in part, to Colombia's "illegality of abortion"[@daniels2015tackling].

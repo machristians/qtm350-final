@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Conclusion – Population Dynamics in Latin America</title>
+<title>Fertility rates among adolescents – Population Dynamics in Latin America</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,10 +20,30 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -67,6 +87,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -102,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Death Rate vs.&nbsp;Birth Rate</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./fertility_rate.html"> 
+    <a class="nav-link active" href="./fertility_rate.html" aria-current="page"> 
 <span class="menu-text">Adolescent Fertility Rates</span></a>
   </li>  
   <li class="nav-item">
@@ -110,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Child Mortality Rates</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./conclusion.html" aria-current="page"> 
+    <a class="nav-link" href="./conclusion.html"> 
 <span class="menu-text">Conclusion</span></a>
   </li>  
   <li class="nav-item">
@@ -133,16 +156,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link active" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link active" data-scroll-target="#results">Results</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="conclusion.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="fertility_rate.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Conclusion</h1>
+<h1 class="title">Fertility rates among adolescents</h1>
 </div>
 
 
@@ -159,14 +183,80 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In Conclusion, ….</p>
+<p>Which countries have a disproportionately high adolescent fertility rate?</p>
+<p>This page explores the patterns of fertility rate (overall, and just among adolescents) in four Latin American countries: Colombia, Brazil, Argentina, and Mexico.</p>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<div id="74908f0a" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">country</th>
+<th data-quarto-table-cell-role="th">fertility_rate</th>
+<th data-quarto-table-cell-role="th">ado_fertility_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Mexico</td>
+<td>1.940</td>
+<td>0.061111</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Colombia</td>
+<td>1.663</td>
+<td>0.060175</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Brazil</td>
+<td>1.629</td>
+<td>0.042881</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Argentina</td>
+<td>1.482</td>
+<td>0.025767</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-natural_rate_barplot" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div id="natural_rate_barplot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="fertility_rate_files/figure-html/natural_rate_barplot-output-1.png" class="img-fluid figure-img"></p>
+<figcaption>Fertility rate plot</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
+<p>Though it’s hard to tell with only four points of comparison, we can see Colombia is somewhat of an outlier in this analysis. Its adolescent fertility rate is disproportionately high compared to its <em>overall</em> fertility rate, indicating that Colombians aged 15-19 give birth more than would be expected compared to the rest of the Colombian population.</p>
+<p>This trend is confirmed in other studies, which attributes the high adolescent fertility, in part, to Colombia’s “illegality of abortion”<span class="citation" data-cites="daniels2015tackling">(<a href="#ref-daniels2015tackling" role="doc-biblioref">Daniels 2015</a>)</span>.</p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-daniels2015tackling" class="csl-entry" role="listitem">
+Daniels, Joe Parkin. 2015. <span>“Tackling Teenage Pregnancy in Colombia.”</span> <em>The Lancet</em> 385 (9977): 1495–96.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
