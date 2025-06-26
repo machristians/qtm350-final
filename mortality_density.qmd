@@ -1,0 +1,65 @@
+---
+title: "Fertility rates among adolescents"
+---
+
+Which countries have a disproportionately high adolescent fertility rate?
+
+This page explores the patterns of fertility rate (overall, and just among adolescents) in four Latin American countries: Colombia, Brazil, Argentina, and Mexico.
+
+## Results 
+```{python}
+#| echo: false
+#| eval: true
+
+import pandas as pd
+import sqlite3
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Connect to sql
+conn = sqlite3.connect('data/wdi_data.db')  
+
+# SQL query
+query = """
+SELECT 
+    country,
+    population_density,
+    under_5_mortality_rate
+FROM wdi_data
+WHERE population_density IS NOT NULL AND under_5_mortality_rate IS NOT NULL;
+"""
+df = pd.read_sql_query(query, conn)
+
+display(pd.read_sql(query, conn))
+
+```
+
+```{python}
+#| label: natural_rate_barplot
+#| echo: false
+#| eval: true
+#| fig-cap: "Birth Rate vs. Death Rate "
+
+
+
+# Plot
+plt.figure(figsize=(12, 6))
+sns.scatterplot(
+    data=df, 
+    x='population_density', y='under_5_mortality_rate', 
+    hue='country',
+    s = 300
+)
+
+plt.title('Child mortality vs. Population density')
+plt.ylabel('Deaths under 5 y.o. per 1,000 live births')
+plt.xlabel('People per sq. km of land')
+plt.tight_layout()
+plt.show()
+
+```
+
+## Interpretation 
+There isn't an obvious trend between child mortality and population density, but we can see from this plot that Brazil's child mortality rate is particularly high compared to the other three Latin American countries.
+
+Brazil's high child mortality rate is observed in other studies, which attribute it to insufficient prenatal care in the country [@francca2017leading].
