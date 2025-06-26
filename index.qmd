@@ -2,9 +2,10 @@
 title: "QTM 350 Final Project - Population Dynamics in Latin America"
 ---
 
-## Presented By 
-Ahshar Brown - Student Id: 2575182 
-Macy Christians - Student Id: ###### 
+## Presented By
+Ahshar Brown - Student ID: 2575182
+
+Maisy Christians - Student ID: 2550529
 
 ## Introduction 
 In this project, we explore population dynamics across several Latin American countries, focusing on Mexico, Colombia, Argentina, and Brazil. These nations were selected for their diverse social, economic, and demographic profiles, offering distinct perspectives on life in Latin America. Through this analysis, we examine how urbanization influences population trends, compare birth and death rates, and investigate other key factors shaping demographic change in the region.
