@@ -8,6 +8,8 @@ website:
     left:
       - href: index.qmd
         text: Introduction
+      - href: data_description.qmd
+        text: Data Description 
 
       - href: pop_growth.qmd
         text: Urbanization vs. Population Growth
