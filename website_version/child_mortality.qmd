@@ -1,0 +1,17 @@
+---
+title: "Child mortality rates"
+---
+
+Which countries have an outlying child mortality rate?
+
+This page explores the patterns of child mortality rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico.
+
+## Data Analysis 
+![Child mortality rates (table format)](/figures/cm_tab.png) 
+
+![Child mortality rates across Latin American countries](/figures/child_mortality.png)
+
+## Results & Discussion 
+We can see from this plot that Brazil's child mortality rate is particularly high compared to the other three Latin American countries.
+
+Brazil's high child mortality rate is observed in other studies, which attribute it to insufficient prenatal care in the country [@francca2017leading].

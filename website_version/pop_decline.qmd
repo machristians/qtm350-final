@@ -1,0 +1,15 @@
+---
+title: "Death Rate vs. Birth Rate"
+---
+
+Which countries have death rates higher than birth rates?
+
+This page explores the relationship between the birth rate and death rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico.
+
+## Data Analysis 
+![Death rates and birth rates (table format)](/figures/pd_tab.png) 
+
+![Death rates and birth rates across Latin American countries](/figures/pop_decline.png) 
+
+## Results & Discussion 
+As shown in the graph, none of these countries currently have a death rate that surpasses their birth rate. Colombia and Brazil show comparable differences between birth and death rates, while Argentina's gap is slightly narrower. Among all 4 countries compared, Mexico exhibits the highest natural population growth, whereas Argentina's growth is smaller.

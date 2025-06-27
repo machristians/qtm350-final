@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "pop_growth.html",
+    "href": "pop_growth.html",
+    "title": "Urbanization vs. Population Growth",
+    "section": "",
+    "text": "Do more urbanized countries experience higher population growth?\nThis page explores the relationship between the urbanization rate and population growth rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico. It compares how different levels of urban development may lead to differences in population growth."
+  },
+  {
+    "objectID": "pop_growth.html#data-analysis",
+    "href": "pop_growth.html#data-analysis",
+    "title": "Urbanization vs. Population Growth",
+    "section": "Data Analysis",
+    "text": "Data Analysis\n\n\n\nPopulation growth (table format)\n\n\n\n\n\nPopulation growth rates across Latin American countries"
+  },
+  {
+    "objectID": "pop_growth.html#results-discussion",
+    "href": "pop_growth.html#results-discussion",
+    "title": "Urbanization vs. Population Growth",
+    "section": "Results & Discussion",
+    "text": "Results & Discussion\nAs shown by the graph, countries with a higher urban population tend to have lower population growth rates, while those with a lower urban population have higher growth rates. Specifically, Mexico and Colombia, which have urban populations below 83%, both exhibit population growth rates above 70%. In contrast, Brazil and Argentina, with urban populations exceeding 85%, have population growth rates below 50%. This suggests an inverse relationship between urbanization and population growth among these countries."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "QTM 350 Final Project - Population Dynamics in Latin America",
+    "section": "",
+    "text": "Ahshar Brown - Student ID: 2575182\nMaisy Christians - Student ID: 2550529"
+  },
+  {
+    "objectID": "index.html#presented-by",
+    "href": "index.html#presented-by",
+    "title": "QTM 350 Final Project - Population Dynamics in Latin America",
+    "section": "",
+    "text": "Ahshar Brown - Student ID: 2575182\nMaisy Christians - Student ID: 2550529"
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "QTM 350 Final Project - Population Dynamics in Latin America",
+    "section": "Introduction",
+    "text": "Introduction\nIn this project, we explore population dynamics across several Latin American countries, focusing on Mexico, Colombia, Argentina, and Brazil. These nations were selected for their diverse social, economic, and demographic profiles, offering distinct perspectives on life in Latin America. Through this analysis, we examine how urbanization influences population trends, compare birth and death rates, and investigate other key factors shaping demographic change in the region."
+  },
+  {
+    "objectID": "index.html#data-description",
+    "href": "index.html#data-description",
+    "title": "QTM 350 Final Project - Population Dynamics in Latin America",
+    "section": "Data Description",
+    "text": "Data Description\nThis project uses data from the World Bank’s World Development Indicators (WDI) database, which includes over 1,600 indicators for more than 200 countries from 1960 to 2023.\nFor this analysis, we selected a focused set of population-related indicators to explore key aspects of demographic change, including:\n\ntotal population\npopulation growth\nurban and rural population percentages\nfertility rate\nbirth and death rates\ninfant and under-five mortality rates\nadolescent fertility\nnet migration\npopulation density\nlife expectancy\n\nThe countries analyzed [Brazil (BRA), Mexico (MEX), Argentina (ARG), and Colombia (COL)] were chosen to reflect a diversity of social and economic conditions within Latin America."
+  },
+  {
+    "objectID": "conclusion.html",
+    "href": "conclusion.html",
+    "title": "Conclusion",
+    "section": "",
+    "text": "In Conclusion,\nAcross all four countries analyzed, birth rates exceed death rates, with Mexico showing the highest natural population growth and Argentina the lowest. Urbanization appears inversely related to growth—Mexico and Colombia, with lower urban populations, have higher growth rates, while Brazil and Argentina show the opposite.\nColombia stands out with a notably high adolescent fertility rate relative to its overall fertility rate, suggesting early-age childbirth is more common. Additionally, Brazil shows a higher child mortality rate than the others, signaling potential health or socioeconomic concerns.\nOverall, despite the limited sample size, distinct demographic patterns emerge, highlighting significant regional disparities in growth, urbanization, and health outcomes."
+  },
+  {
+    "objectID": "child_mortality.html",
+    "href": "child_mortality.html",
+    "title": "Child mortality rates",
+    "section": "",
+    "text": "Which countries have an outlying child mortality rate?\nThis page explores the patterns of child mortality rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico."
+  },
+  {
+    "objectID": "child_mortality.html#data-analysis",
+    "href": "child_mortality.html#data-analysis",
+    "title": "Child mortality rates",
+    "section": "Data Analysis",
+    "text": "Data Analysis\n\n\n\nChild mortality rates (table format)\n\n\n\n\n\nChild mortality rates across Latin American countries"
+  },
+  {
+    "objectID": "child_mortality.html#results-discussion",
+    "href": "child_mortality.html#results-discussion",
+    "title": "Child mortality rates",
+    "section": "Results & Discussion",
+    "text": "Results & Discussion\nWe can see from this plot that Brazil’s child mortality rate is particularly high compared to the other three Latin American countries.\nBrazil’s high child mortality rate is observed in other studies, which attribute it to insufficient prenatal care in the country (França et al. 2017)."
+  },
+  {
+    "objectID": "fertility_rate.html",
+    "href": "fertility_rate.html",
+    "title": "Fertility rates among adolescents",
+    "section": "",
+    "text": "Which countries have a disproportionately high adolescent fertility rate?\nThis page explores the patterns of fertility rate (overall, and just among adolescents) in four Latin American countries: Colombia, Brazil, Argentina, and Mexico."
+  },
+  {
+    "objectID": "fertility_rate.html#data-analysis",
+    "href": "fertility_rate.html#data-analysis",
+    "title": "Fertility rates among adolescents",
+    "section": "Data Analysis",
+    "text": "Data Analysis\n\n\n\nFertility rates (table format)\n\n\n\n\n\nFertility rates (adolescent and overall) across Latin American countries"
+  },
+  {
+    "objectID": "fertility_rate.html#results-discussion",
+    "href": "fertility_rate.html#results-discussion",
+    "title": "Fertility rates among adolescents",
+    "section": "Results & Discussion",
+    "text": "Results & Discussion\nThough it’s hard to tell with only four points of comparison, we can see Colombia is somewhat of an outlier in this analysis. Its adolescent fertility rate is disproportionately high compared to its overall fertility rate, indicating that Colombians aged 15-19 give birth more than would be expected compared to the rest of the Colombian population.\nThis trend is confirmed in other studies, which attributes the high adolescent fertility, in part, to Colombia’s “illegality of abortion”(Daniels 2015)."
+  },
+  {
+    "objectID": "pop_decline.html",
+    "href": "pop_decline.html",
+    "title": "Death Rate vs. Birth Rate",
+    "section": "",
+    "text": "Which countries have death rates higher than birth rates?\nThis page explores the relationship between the birth rate and death rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico."
+  },
+  {
+    "objectID": "pop_decline.html#data-analysis",
+    "href": "pop_decline.html#data-analysis",
+    "title": "Death Rate vs. Birth Rate",
+    "section": "Data Analysis",
+    "text": "Data Analysis\n\n\n\nDeath rates and birth rates (table format)\n\n\n\n\n\nDeath rates and birth rates across Latin American countries"
+  },
+  {
+    "objectID": "pop_decline.html#results-discussion",
+    "href": "pop_decline.html#results-discussion",
+    "title": "Death Rate vs. Birth Rate",
+    "section": "Results & Discussion",
+    "text": "Results & Discussion\nAs shown in the graph, none of these countries currently have a death rate that surpasses their birth rate. Colombia and Brazil show comparable differences between birth and death rates, while Argentina’s gap is slightly narrower. Among all 4 countries compared, Mexico exhibits the highest natural population growth, whereas Argentina’s growth is smaller."
+  }
+]

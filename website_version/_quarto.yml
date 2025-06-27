@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: ../website_docs #put docs in a separate folder
+  resources:
+    - figures/** #so relative path still works on render; quarto doesn't allow you to use folders outside your root directory, so I had to move the figures folder inside the website_version folder
+bibliography: ../references.bib
+
+website:
+  title: "Population Dynamics in Latin America"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Introduction
+
+      - href: pop_growth.qmd
+        text: Urbanization vs. Population Growth
+      - href: pop_decline.qmd
+        text: Death Rate vs. Birth Rate
+      - href: fertility_rate.qmd
+        text: Adolescent Fertility Rates
+      - href: child_mortality.qmd
+        text: Child Mortality Rates
+
+      - href: conclusion.qmd
+        text: Conclusion
+
+format:
+  html:
+    css: styles.css
+    theme: 
+       - journal  
