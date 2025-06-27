@@ -6,59 +6,10 @@ Do more urbanized countries experience higher population growth?
 
 This page explores the relationship between the urbanization rate and population growth rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico. It compares how different levels of urban development may lead to differences in population growth.
 
-## Results 
-```{python}
-#| echo: false
-#| eval: true
+## Data Analysis 
+# table?
 
-import pandas as pd
-import sqlite3
-import matplotlib.pyplot as plt
-import seaborn as sns
+![Population growth rates across Latin American countries](figures/pop_growth.png) 
 
-# Connect to sql
-conn = sqlite3.connect('data/wdi_data.db')  
-
-# SQL query
-query = """
-SELECT 
-    country,
-    urban_population_percent,
-    rural_population_percent,
-    population_growth
-FROM wdi_data
-WHERE 
-    urban_population_percent IS NOT NULL 
-    AND population_growth IS NOT NULL
-"""
-df = pd.read_sql_query(query, conn)
-
-display(pd.read_sql(query, conn))
-
-```
-
-```{python}
-#| label: pop_growth_scatter
-#| echo: false
-#| eval: true
-#| fig-cap: "Urbanization vs. Population Growth "
-
-
-plt.figure(figsize=(10, 6))
-sns.scatterplot(
-    data=df,
-    x="urban_population_percent",
-    y="population_growth",
-    hue="country",
-)
-
-plt.xlabel("Urban Population (%)")
-plt.ylabel("Population Growth Rate (%)")
-plt.title("Urbanization vs Population Growth Rate")
-plt.tight_layout()
-plt.show()
-
-```
-
-## Interpretation 
+## Results & Discussion 
 As shown by the graph, countries with a higher urban population tend to have lower population growth rates, while those with a lower urban population have higher growth rates. Specifically, Mexico and Colombia, which have urban populations below 83%, both exhibit population growth rates above 70%. In contrast, Brazil and Argentina, with urban populations exceeding 85%, have population growth rates below 50%. This suggests an inverse relationship between urbanization and population growth among these countries.

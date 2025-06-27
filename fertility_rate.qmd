@@ -6,43 +6,12 @@ Which countries have a disproportionately high adolescent fertility rate?
 
 This page explores the patterns of fertility rate (overall, and just among adolescents) in four Latin American countries: Colombia, Brazil, Argentina, and Mexico.
 
-## Results 
-```{python}
-#| echo: false
-#| eval: true
+## Data Analysis 
+# table?
 
-#display table
+![Fertility rates (adolescent and overall) across Latin American countries](figures/fertility_rate.png) 
 
-```
-
-```{python}
-#| label: natural_rate_barplot
-#| echo: false
-#| eval: true
-#| fig-cap: "Fertility rate plot"
-
-
-
-# Plot
-plt.figure(figsize=(12, 6))
-sns.scatterplot(
-    data=df, 
-    x='fertility_rate', y='ado_fertility_rate', 
-    hue='country',
-    s = 300
-)
-
-plt.grid(True)
-plt.xlim(1.4, 2.2)
-plt.title('Adolescent vs. overall fertility rate')
-plt.ylabel('Births per female aged 15-19')
-plt.xlabel('Births per female')
-plt.tight_layout()
-plt.show()
-
-```
-
-## Interpretation 
+## Results & Discussion 
 Though it's hard to tell with only four points of comparison, we can see Colombia is somewhat of an outlier in this analysis. Its adolescent fertility rate is disproportionately high compared to its *overall* fertility rate, indicating that Colombians aged 15-19 give birth more than would be expected compared to the rest of the Colombian population.
 
 This trend is confirmed in other studies, which attributes the high adolescent fertility, in part, to Colombia's "illegality of abortion"[@daniels2015tackling].
