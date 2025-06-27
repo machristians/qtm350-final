@@ -17,10 +17,9 @@ website:
         text: Adolescent Fertility Rates
       - href: child_mortality.qmd
         text: Child Mortality Rates
-        
+
       - href: conclusion.qmd
         text: Conclusion
-      - about.qmd
 
 format:
   html:
