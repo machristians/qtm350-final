@@ -11,27 +11,7 @@ This page explores the patterns of fertility rate (overall, and just among adole
 #| echo: false
 #| eval: true
 
-import pandas as pd
-import sqlite3
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-# Connect to sql
-conn = sqlite3.connect('data/wdi_data.db')  
-
-# SQL query
-query = """
-SELECT 
-    country,
-    fertility_rate,
-    (adolescent_fertility_rate/1000) AS ado_fertility_rate
-FROM wdi_data
-WHERE fertility_rate IS NOT NULL AND adolescent_fertility_rate IS NOT NULL
-ORDER BY fertility_rate DESC;
-"""
-df = pd.read_sql_query(query, conn)
-
-display(pd.read_sql(query, conn))
+#display table
 
 ```
 
