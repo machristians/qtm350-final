@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -67,9 +67,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -109,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Adolescent Fertility Rates</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./mortality_density.html"> 
+    <a class="nav-link" href="./child_mortality.html"> 
 <span class="menu-text">Child Mortality Rates</span></a>
   </li>  
   <li class="nav-item">
@@ -136,8 +133,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#results" id="toc-results" class="nav-link active" data-scroll-target="#results">Results</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link active" data-scroll-target="#data-analysis">Data Analysis</a></li>
+  <li><a href="#table" id="toc-table" class="nav-link" data-scroll-target="#table">table?</a>
+  <ul class="collapse">
+  <li><a href="#results-discussion" id="toc-results-discussion" class="nav-link" data-scroll-target="#results-discussion">Results &amp; Discussion</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="pop_growth.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -165,74 +165,23 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Do more urbanized countries experience higher population growth?</p>
 <p>This page explores the relationship between the urbanization rate and population growth rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico. It compares how different levels of urban development may lead to differences in population growth.</p>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<div id="244ea31a" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">country</th>
-<th data-quarto-table-cell-role="th">urban_population_percent</th>
-<th data-quarto-table-cell-role="th">rural_population_percent</th>
-<th data-quarto-table-cell-role="th">population_growth</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>Colombia</td>
-<td>82.050</td>
-<td>17.950</td>
-<td>1.068293</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Argentina</td>
-<td>92.347</td>
-<td>7.653</td>
-<td>0.210809</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Mexico</td>
-<td>81.300</td>
-<td>18.700</td>
-<td>0.753117</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>Brazil</td>
-<td>87.555</td>
-<td>12.445</td>
-<td>0.360181</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="cell-pop_growth_scatter" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display">
-<div id="pop_growth_scatter" class="quarto-figure quarto-figure-center anchored">
+<section id="data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="data-analysis">Data Analysis</h2>
+</section>
+<section id="table" class="level1">
+<h1>table?</h1>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="pop_growth_files/figure-html/pop_growth_scatter-output-1.png" class="img-fluid figure-img"></p>
-<figcaption>Urbanization vs.&nbsp;Population Growth</figcaption>
+<p><img src="figures/pop_growth.png" class="img-fluid figure-img"></p>
+<figcaption>Population growth rates across Latin American countries</figcaption>
 </figure>
 </div>
-</div>
-</div>
-</section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
+<section id="results-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-discussion">Results &amp; Discussion</h2>
 <p>As shown by the graph, countries with a higher urban population tend to have lower population growth rates, while those with a lower urban population have higher growth rates. Specifically, Mexico and Colombia, which have urban populations below 83%, both exhibit population growth rates above 70%. In contrast, Brazil and Argentina, with urban populations exceeding 85%, have population growth rates below 50%. This suggests an inverse relationship between urbanization and population growth among these countries.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

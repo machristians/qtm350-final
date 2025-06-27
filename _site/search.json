@@ -1,45 +1,59 @@
 [
   {
-    "objectID": "pop_growth.html",
-    "href": "pop_growth.html",
-    "title": "Urbanization vs. Population Growth",
+    "objectID": "scripts/figures.html",
+    "href": "scripts/figures.html",
+    "title": "import packages",
     "section": "",
-    "text": "Do more urbanized countries experience higher population growth?\nThis page explores the relationship between the urbanization rate and population growth rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico. It compares how different levels of urban development may lead to differences in population growth."
+    "text": "import pandas as pd\nimport sqlite3\nimport matplotlib.pyplot as plt\nimport seaborn as sns"
   },
   {
-    "objectID": "pop_growth.html#results",
-    "href": "pop_growth.html#results",
-    "title": "Urbanization vs. Population Growth",
-    "section": "Results",
-    "text": "Results\n\n\n\n\n\n\n\n\n\ncountry\nurban_population_percent\nrural_population_percent\npopulation_growth\n\n\n\n\n0\nColombia\n82.050\n17.950\n1.068293\n\n\n1\nArgentina\n92.347\n7.653\n0.210809\n\n\n2\nMexico\n81.300\n18.700\n0.753117\n\n\n3\nBrazil\n87.555\n12.445\n0.360181\n\n\n\n\n\n\n\n\n\n\n\n\nUrbanization vs. Population Growth"
+    "objectID": "scripts/figures.html#fertility_rate",
+    "href": "scripts/figures.html#fertility_rate",
+    "title": "import packages",
+    "section": "fertility_rate",
+    "text": "fertility_rate\n\ntable\n\n# SQL query\nquery = \"\"\"\nSELECT \n    country,\n    fertility_rate,\n    (adolescent_fertility_rate/1000) AS ado_fertility_rate\nFROM wdi_data\nWHERE fertility_rate IS NOT NULL AND adolescent_fertility_rate IS NOT NULL\nORDER BY fertility_rate DESC;\n\"\"\"\ndf1 = pd.read_sql_query(query, conn)\n\ndisplay(pd.read_sql(query, conn))\n\n\n\n\n\n\n\n\ncountry\nfertility_rate\nado_fertility_rate\n\n\n\n\n0\nMexico\n1.940\n0.061111\n\n\n1\nColombia\n1.663\n0.060175\n\n\n2\nBrazil\n1.629\n0.042881\n\n\n3\nArgentina\n1.482\n0.025767\n\n\n\n\n\n\n\n\n\nplot\n\nplt.figure(figsize=(12, 6))\nsns.scatterplot(\n    data=df1, \n    x='fertility_rate', y='ado_fertility_rate', \n    hue='country',\n    s = 300\n)\n\nplt.grid(True)\nplt.xlim(1.4, 2.2)\nplt.title('Adolescent vs. overall fertility rate')\nplt.ylabel('Births per female aged 15-19')\nplt.xlabel('Births per female')\nplt.tight_layout()\nplt.savefig('../figures/fertility_rate.png')"
   },
   {
-    "objectID": "pop_growth.html#interpretation",
-    "href": "pop_growth.html#interpretation",
-    "title": "Urbanization vs. Population Growth",
-    "section": "Interpretation",
-    "text": "Interpretation\nAs shown by the graph, countries with a higher urban population tend to have lower population growth rates, while those with a lower urban population have higher growth rates. Specifically, Mexico and Colombia, which have urban populations below 83%, both exhibit population growth rates above 70%. In contrast, Brazil and Argentina, with urban populations exceeding 85%, have population growth rates below 50%. This suggests an inverse relationship between urbanization and population growth among these countries."
+    "objectID": "scripts/figures.html#mortality_density",
+    "href": "scripts/figures.html#mortality_density",
+    "title": "import packages",
+    "section": "mortality_density",
+    "text": "mortality_density\n\ntable\n\n# SQL query\nquery = \"\"\"\nSELECT \n    country,\n    population_density,\n    under_5_mortality_rate\nFROM wdi_data\nWHERE population_density IS NOT NULL AND under_5_mortality_rate IS NOT NULL\nORDER BY under_5_mortality_rate;\n\"\"\"\ndf2 = pd.read_sql_query(query, conn)\n\ndisplay(pd.read_sql(query, conn))\n\n\n\n\n\n\n\n\ncountry\npopulation_density\nunder_5_mortality_rate\n\n\n\n\n0\nArgentina\n16.592272\n9.8\n\n\n1\nColombia\n46.631766\n12.4\n\n\n2\nMexico\n66.160712\n12.9\n\n\n3\nBrazil\n25.161868\n14.6\n\n\n\n\n\n\n\n\n\nplot\n\nplt.figure(figsize=(12, 6))\nsns.barplot(\n    data=df2, \n    x='country', y='under_5_mortality_rate'\n)\n\nplt.title('Child mortality across countries')\nplt.ylabel('Deaths under 5 y.o. per 1,000 live births')\nplt.xlabel('Country')\nplt.tight_layout()\nplt.savefig('../figures/child_mortality.png')"
   },
   {
-    "objectID": "mortality_density.html",
-    "href": "mortality_density.html",
-    "title": "Child mortality rate vs. Population density",
+    "objectID": "scripts/figures.html#pop_decline",
+    "href": "scripts/figures.html#pop_decline",
+    "title": "import packages",
+    "section": "pop_decline",
+    "text": "pop_decline\n\ntable\n\n# SQL query\nquery = \"\"\"\nSELECT \n    country,\n    birth_rate,\n    death_rate,\n    (birth_rate - death_rate) AS circle_of_life\nFROM wdi_data\nWHERE birth_rate IS NOT NULL AND death_rate IS NOT NULL\nORDER BY circle_of_life ASC;\n\"\"\"\ndf3 = pd.read_sql_query(query, conn)\n\ndisplay(pd.read_sql(query, conn))\n\n\n\n\n\n\n\n\ncountry\nbirth_rate\ndeath_rate\ncircle_of_life\n\n\n\n\n0\nArgentina\n10.926\n8.797\n2.129\n\n\n1\nBrazil\n12.555\n7.539\n5.016\n\n\n2\nColombia\n13.731\n5.881\n7.850\n\n\n3\nMexico\n16.041\n6.521\n9.520\n\n\n\n\n\n\n\n\n\nplot\n\n# Melt the dataframe to long format\ndf_melted = pd.melt(\n    df3, \n    id_vars='country', \n    value_vars=['birth_rate', 'death_rate'], \n    var_name='rate_type', \n    value_name='rate'\n)\n\n# Plot\nplt.figure(figsize=(12, 6))\nsns.barplot(\n    data=df_melted, \n    x='country', y='rate', \n    hue='rate_type'\n)\n\nplt.title('Birth Rate vs Death Rate')\nplt.ylabel('Rate per 1,000 People')\nplt.xlabel('Country')\nplt.tight_layout()\nplt.savefig('../figures/pop_decline.png')"
+  },
+  {
+    "objectID": "scripts/figures.html#pop_growth",
+    "href": "scripts/figures.html#pop_growth",
+    "title": "import packages",
+    "section": "pop_growth",
+    "text": "pop_growth\n\ntable\n\n# SQL query\nquery = \"\"\"\nSELECT \n    country,\n    urban_population_percent,\n    rural_population_percent,\n    population_growth\nFROM wdi_data\nWHERE \n    urban_population_percent IS NOT NULL \n    AND population_growth IS NOT NULL\n\"\"\"\ndf4 = pd.read_sql_query(query, conn)\n\ndisplay(pd.read_sql(query, conn))\n\n\n\n\n\n\n\n\ncountry\nurban_population_percent\nrural_population_percent\npopulation_growth\n\n\n\n\n0\nColombia\n82.050\n17.950\n1.068293\n\n\n1\nArgentina\n92.347\n7.653\n0.210809\n\n\n2\nMexico\n81.300\n18.700\n0.753117\n\n\n3\nBrazil\n87.555\n12.445\n0.360181\n\n\n\n\n\n\n\n\n\nplot\n\nplt.figure(figsize=(10, 6))\nsns.scatterplot(\n    data=df4,\n    x=\"urban_population_percent\",\n    y=\"population_growth\",\n    hue=\"country\",\n    s = 300\n)\n\nplt.xlabel(\"Urban Population (%)\")\nplt.ylabel(\"Population Growth Rate (%)\")\nplt.title(\"Urbanization vs Population Growth Rate\")\nplt.tight_layout()\nplt.savefig('../figures/pop_growth.png')"
+  },
+  {
+    "objectID": "pop_decline.html",
+    "href": "pop_decline.html",
+    "title": "Death Rate vs. Birth Rate",
     "section": "",
-    "text": "Is there a trend between child mortality rate and population density?\nWhich countries have an outlying child mortality rate?\nThis page explores the patterns of child mortality rate vs. population density in four Latin American countries: Colombia, Brazil, Argentina, and Mexico."
+    "text": "Which countries have death rates higher than birth rates?\nThis page explores the relationship between the birth rate and death rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico."
   },
   {
-    "objectID": "mortality_density.html#results",
-    "href": "mortality_density.html#results",
-    "title": "Child mortality rate vs. Population density",
-    "section": "Results",
-    "text": "Results\n\n\n\n\n\n\n\n\n\ncountry\npopulation_density\nunder_5_mortality_rate\n\n\n\n\n0\nArgentina\n16.592272\n9.8\n\n\n1\nColombia\n46.631766\n12.4\n\n\n2\nMexico\n66.160712\n12.9\n\n\n3\nBrazil\n25.161868\n14.6\n\n\n\n\n\n\n\n\n\n\n\n\nChild mortality vs. Population density"
+    "objectID": "pop_decline.html#data-analysis",
+    "href": "pop_decline.html#data-analysis",
+    "title": "Death Rate vs. Birth Rate",
+    "section": "Data Analysis",
+    "text": "Data Analysis"
   },
   {
-    "objectID": "mortality_density.html#interpretation",
-    "href": "mortality_density.html#interpretation",
-    "title": "Child mortality rate vs. Population density",
-    "section": "Interpretation",
-    "text": "Interpretation\nThere isn’t an obvious trend between child mortality and population density, but we can see from this plot that Brazil’s child mortality rate is particularly high compared to the other three Latin American countries.\nBrazil’s high child mortality rate is observed in other studies, which attribute it to insufficient prenatal care in the country (França et al. 2017)."
+    "objectID": "pop_decline.html#results-discussion",
+    "href": "pop_decline.html#results-discussion",
+    "title": "Death Rate vs. Birth Rate",
+    "section": "Results & Discussion",
+    "text": "Results & Discussion\nAs shown in the graph, none of these countries currently have a death rate that surpasses their birth rate. Colombia and Brazil show comparable differences between birth and death rates, while Argentina’s gap is slightly narrower. Among all 4 countries compared, Mexico exhibits the highest natural population growth, whereas Argentina’s growth is smaller."
   },
   {
     "objectID": "fertility_rate.html",
@@ -49,32 +63,18 @@
     "text": "Which countries have a disproportionately high adolescent fertility rate?\nThis page explores the patterns of fertility rate (overall, and just among adolescents) in four Latin American countries: Colombia, Brazil, Argentina, and Mexico."
   },
   {
-    "objectID": "fertility_rate.html#results",
-    "href": "fertility_rate.html#results",
+    "objectID": "fertility_rate.html#data-analysis",
+    "href": "fertility_rate.html#data-analysis",
     "title": "Fertility rates among adolescents",
-    "section": "Results",
-    "text": "Results\n\n\n\n\n\n\n\n\n\ncountry\nfertility_rate\nado_fertility_rate\n\n\n\n\n0\nMexico\n1.940\n0.061111\n\n\n1\nColombia\n1.663\n0.060175\n\n\n2\nBrazil\n1.629\n0.042881\n\n\n3\nArgentina\n1.482\n0.025767\n\n\n\n\n\n\n\n\n\n\n\n\nFertility rate plot"
+    "section": "Data Analysis",
+    "text": "Data Analysis"
   },
   {
-    "objectID": "fertility_rate.html#interpretation",
-    "href": "fertility_rate.html#interpretation",
+    "objectID": "fertility_rate.html#results-discussion",
+    "href": "fertility_rate.html#results-discussion",
     "title": "Fertility rates among adolescents",
-    "section": "Interpretation",
-    "text": "Interpretation\nThough it’s hard to tell with only four points of comparison, we can see Colombia is somewhat of an outlier in this analysis. Its adolescent fertility rate is disproportionately high compared to its overall fertility rate, indicating that Colombians aged 15-19 give birth more than would be expected compared to the rest of the Colombian population.\nThis trend is confirmed in other studies, which attributes the high adolescent fertility, in part, to Colombia’s “illegality of abortion”(Daniels 2015)."
-  },
-  {
-    "objectID": "data/finaldata.html",
-    "href": "data/finaldata.html",
-    "title": "Population Dynamics in Latin America",
-    "section": "",
-    "text": "from wbgapi import data as wbdata\nimport pandas as pd\n\n# Define indicators\npopulation_indicators = {\n    'total_population': 'SP.POP.TOTL',\n    'population_growth': 'SP.POP.GROW',\n    'urban_population_percent': 'SP.URB.TOTL.IN.ZS',\n    'rural_population_percent': 'SP.RUR.TOTL.ZS',\n    'fertility_rate': 'SP.DYN.TFRT.IN',\n    'birth_rate': 'SP.DYN.CBRT.IN',\n    'death_rate': 'SP.DYN.CDRT.IN',\n    'infant_mortality_rate': 'SP.DYN.IMRT.IN',\n    'under_5_mortality_rate': 'SH.DYN.MORT',\n    'adolescent_fertility_rate': 'SP.ADO.TFRT',\n    'net_migration': 'SM.POP.NETM',\n    'population_density': 'EN.POP.DNST',\n    'life_expectancy': 'SP.DYN.LE00.IN'\n}\n\n# Countries\ncountry_codes = ['BRA', 'MEX', 'ARG', 'COL']\n\n# Download wide-format data for 2022\ndf = wbdata.DataFrame(\n    population_indicators.values(),\n    economy=country_codes,\n    time=2022,\n    skipBlanks=True,\n    labels=True\n).reset_index()\n\n# Drop unwanted columns (if any)\ndf.drop(columns=['economy'], errors='ignore', inplace=True)\n\n# Rename columns using your friendly keys\ndf.rename(columns=lambda x: {v: k for k, v in population_indicators.items()}.get(x, x).lower(), inplace=True)\n\n# Save to CSV\ndf.to_csv('wdi_population_.csv', index=False)\n\n\nimport sqlite3\n\n# Connect to or create the database\nconn = sqlite3.connect('wdi_data.db')\n\n# Load CSV into DataFrame\ndf = pd.read_csv('wdi_population_.csv')\n\n# Write the data to SQL\ndf.to_sql('wdi_data', conn, if_exists='replace', index=False)\n\n4\n\n\n\nimport pandas as pd\n\ndf = pd.read_csv('wdi_population_.csv')\nprint(df.columns)\n\nIndex(['country', 'population_density', 'under_5_mortality_rate',\n       'net_migration', 'adolescent_fertility_rate', 'birth_rate',\n       'death_rate', 'infant_mortality_rate', 'life_expectancy',\n       'fertility_rate', 'population_growth', 'total_population',\n       'rural_population_percent', 'urban_population_percent'],\n      dtype='object')"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
+    "section": "Results & Discussion",
+    "text": "Results & Discussion\nThough it’s hard to tell with only four points of comparison, we can see Colombia is somewhat of an outlier in this analysis. Its adolescent fertility rate is disproportionately high compared to its overall fertility rate, indicating that Colombians aged 15-19 give birth more than would be expected compared to the rest of the Colombian population.\nThis trend is confirmed in other studies, which attributes the high adolescent fertility, in part, to Colombia’s “illegality of abortion”(Daniels 2015)."
   },
   {
     "objectID": "conclusion.html",
@@ -89,6 +89,41 @@
     "title": "Conclusion",
     "section": "",
     "text": "In Conclusion, …."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "child_mortality.html",
+    "href": "child_mortality.html",
+    "title": "Child mortality rates",
+    "section": "",
+    "text": "Which countries have an outlying child mortality rate?\nThis page explores the patterns of child mortality rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico."
+  },
+  {
+    "objectID": "child_mortality.html#data-analysis",
+    "href": "child_mortality.html#data-analysis",
+    "title": "Child mortality rates",
+    "section": "Data Analysis",
+    "text": "Data Analysis"
+  },
+  {
+    "objectID": "child_mortality.html#results-discussion",
+    "href": "child_mortality.html#results-discussion",
+    "title": "Child mortality rates",
+    "section": "Results & Discussion",
+    "text": "Results & Discussion\nWe can see from this plot that Brazil’s child mortality rate is particularly high compared to the other three Latin American countries.\nBrazil’s high child mortality rate is observed in other studies, which attribute it to insufficient prenatal care in the country (França et al. 2017)."
+  },
+  {
+    "objectID": "data/finaldata.html",
+    "href": "data/finaldata.html",
+    "title": "Population Dynamics in Latin America",
+    "section": "",
+    "text": "from wbgapi import data as wbdata\nimport pandas as pd\n\n# Define indicators\npopulation_indicators = {\n    'total_population': 'SP.POP.TOTL',\n    'population_growth': 'SP.POP.GROW',\n    'urban_population_percent': 'SP.URB.TOTL.IN.ZS',\n    'rural_population_percent': 'SP.RUR.TOTL.ZS',\n    'fertility_rate': 'SP.DYN.TFRT.IN',\n    'birth_rate': 'SP.DYN.CBRT.IN',\n    'death_rate': 'SP.DYN.CDRT.IN',\n    'infant_mortality_rate': 'SP.DYN.IMRT.IN',\n    'under_5_mortality_rate': 'SH.DYN.MORT',\n    'adolescent_fertility_rate': 'SP.ADO.TFRT',\n    'net_migration': 'SM.POP.NETM',\n    'population_density': 'EN.POP.DNST',\n    'life_expectancy': 'SP.DYN.LE00.IN'\n}\n\n# Countries\ncountry_codes = ['BRA', 'MEX', 'ARG', 'COL']\n\n# Download wide-format data for 2022\ndf = wbdata.DataFrame(\n    population_indicators.values(),\n    economy=country_codes,\n    time=2022,\n    skipBlanks=True,\n    labels=True\n).reset_index()\n\n# Drop unwanted columns (if any)\ndf.drop(columns=['economy'], errors='ignore', inplace=True)\n\n# Rename columns using your friendly keys\ndf.rename(columns=lambda x: {v: k for k, v in population_indicators.items()}.get(x, x).lower(), inplace=True)\n\n# Save to CSV\ndf.to_csv('wdi_population_.csv', index=False)\n\n\nimport sqlite3\n\n# Connect to or create the database\nconn = sqlite3.connect('wdi_data.db')\n\n# Load CSV into DataFrame\ndf = pd.read_csv('wdi_population_.csv')\n\n# Write the data to SQL\ndf.to_sql('wdi_data', conn, if_exists='replace', index=False)\n\n4\n\n\n\nimport pandas as pd\n\ndf = pd.read_csv('wdi_population_.csv')\nprint(df.columns)\n\nIndex(['country', 'population_density', 'under_5_mortality_rate',\n       'net_migration', 'adolescent_fertility_rate', 'birth_rate',\n       'death_rate', 'infant_mortality_rate', 'life_expectancy',\n       'fertility_rate', 'population_growth', 'total_population',\n       'rural_population_percent', 'urban_population_percent'],\n      dtype='object')"
   },
   {
     "objectID": "index.html",
@@ -119,24 +154,24 @@
     "text": "Data Description\nThis project uses data from the World Bank’s World Development Indicators (WDI) database, which includes over 1,600 indicators for more than 200 countries from 1960 to 2023.\nFor this analysis, we selected a focused set of population-related indicators to explore key aspects of demographic change, including: - total population - population growth - urban and rural population percentages - fertility rate - birth and death rates - infant and under-five mortality rates - adolescent fertility - net migration - population density - life expectancy\nThe countries analyzed [Brazil (BRA), Mexico (MEX), Argentina (ARG), and Colombia (COL)] were chosen to reflect a diversity of social and economic conditions within Latin America."
   },
   {
-    "objectID": "pop_decline.html",
-    "href": "pop_decline.html",
-    "title": "Death Rate vs. Birth Rate",
+    "objectID": "pop_growth.html",
+    "href": "pop_growth.html",
+    "title": "Urbanization vs. Population Growth",
     "section": "",
-    "text": "Which countries have death rates higher than birth rates?\nThis page explores the relationship between the birth rate and death rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico."
+    "text": "Do more urbanized countries experience higher population growth?\nThis page explores the relationship between the urbanization rate and population growth rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico. It compares how different levels of urban development may lead to differences in population growth."
   },
   {
-    "objectID": "pop_decline.html#results",
-    "href": "pop_decline.html#results",
-    "title": "Death Rate vs. Birth Rate",
-    "section": "Results",
-    "text": "Results\n\n\n\n\n\n\n\n\n\ncountry\nbirth_rate\ndeath_rate\ncircle_of_life\n\n\n\n\n0\nArgentina\n10.926\n8.797\n2.129\n\n\n1\nBrazil\n12.555\n7.539\n5.016\n\n\n2\nColombia\n13.731\n5.881\n7.850\n\n\n3\nMexico\n16.041\n6.521\n9.520\n\n\n\n\n\n\n\n\n\n\n\n\nBirth Rate vs. Death Rate"
+    "objectID": "pop_growth.html#data-analysis",
+    "href": "pop_growth.html#data-analysis",
+    "title": "Urbanization vs. Population Growth",
+    "section": "Data Analysis",
+    "text": "Data Analysis"
   },
   {
-    "objectID": "pop_decline.html#interpretation",
-    "href": "pop_decline.html#interpretation",
-    "title": "Death Rate vs. Birth Rate",
-    "section": "Interpretation",
-    "text": "Interpretation\nAs shown in the graph, none of these countries currently have a death rate that surpasses their birth rate. Colombia and Brazil show comparable differences between birth and death rates, while Argentina’s gap is slightly narrower. Among all 4 countries compared, Mexico exhibits the highest natural population growth, whereas Argentina’s growth is smaller."
+    "objectID": "pop_growth.html#results-discussion",
+    "href": "pop_growth.html#results-discussion",
+    "title": "Urbanization vs. Population Growth",
+    "section": "Results & Discussion",
+    "text": "Results & Discussion\nAs shown by the graph, countries with a higher urban population tend to have lower population growth rates, while those with a lower urban population have higher growth rates. Specifically, Mexico and Colombia, which have urban populations below 83%, both exhibit population growth rates above 70%. In contrast, Brazil and Argentina, with urban populations exceeding 85%, have population growth rates below 50%. This suggests an inverse relationship between urbanization and population growth among these countries."
   }
 ]

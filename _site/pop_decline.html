@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -67,9 +67,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -109,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Adolescent Fertility Rates</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./mortality_density.html"> 
+    <a class="nav-link" href="./child_mortality.html"> 
 <span class="menu-text">Child Mortality Rates</span></a>
   </li>  
   <li class="nav-item">
@@ -136,8 +133,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#results" id="toc-results" class="nav-link active" data-scroll-target="#results">Results</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link active" data-scroll-target="#data-analysis">Data Analysis</a></li>
+  <li><a href="#table" id="toc-table" class="nav-link" data-scroll-target="#table">table?</a>
+  <ul class="collapse">
+  <li><a href="#results-discussion" id="toc-results-discussion" class="nav-link" data-scroll-target="#results-discussion">Results &amp; Discussion</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="pop_decline.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -165,74 +165,23 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Which countries have death rates higher than birth rates?</p>
 <p>This page explores the relationship between the birth rate and death rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico.</p>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<div id="2c5f288a" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">country</th>
-<th data-quarto-table-cell-role="th">birth_rate</th>
-<th data-quarto-table-cell-role="th">death_rate</th>
-<th data-quarto-table-cell-role="th">circle_of_life</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>Argentina</td>
-<td>10.926</td>
-<td>8.797</td>
-<td>2.129</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Brazil</td>
-<td>12.555</td>
-<td>7.539</td>
-<td>5.016</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Colombia</td>
-<td>13.731</td>
-<td>5.881</td>
-<td>7.850</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>Mexico</td>
-<td>16.041</td>
-<td>6.521</td>
-<td>9.520</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="cell-natural_rate_barplot" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display">
-<div id="natural_rate_barplot" class="quarto-figure quarto-figure-center anchored">
+<section id="data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="data-analysis">Data Analysis</h2>
+</section>
+<section id="table" class="level1">
+<h1>table?</h1>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="pop_decline_files/figure-html/natural_rate_barplot-output-1.png" class="img-fluid figure-img"></p>
-<figcaption>Birth Rate vs.&nbsp;Death Rate</figcaption>
+<p><img src="figures/pop_decline.png" class="img-fluid figure-img"></p>
+<figcaption>Death rates and birth rates across Latin American countries</figcaption>
 </figure>
 </div>
-</div>
-</div>
-</section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
+<section id="results-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-discussion">Results &amp; Discussion</h2>
 <p>As shown in the graph, none of these countries currently have a death rate that surpasses their birth rate. Colombia and Brazil show comparable differences between birth and death rates, while Argentina’s gap is slightly narrower. Among all 4 countries compared, Mexico exhibits the highest natural population growth, whereas Argentina’s growth is smaller.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

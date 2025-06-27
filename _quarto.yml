@@ -8,14 +8,16 @@ website:
     left:
       - href: index.qmd
         text: Introduction
+
       - href: pop_growth.qmd
         text: Urbanization vs. Population Growth
       - href: pop_decline.qmd
         text: Death Rate vs. Birth Rate
       - href: fertility_rate.qmd
         text: Adolescent Fertility Rates
-      - href: mortality_density.qmd
+      - href: child_mortality.qmd
         text: Child Mortality Rates
+        
       - href: conclusion.qmd
         text: Conclusion
       - about.qmd
