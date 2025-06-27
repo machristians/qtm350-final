@@ -7,7 +7,7 @@ Which countries have a disproportionately high adolescent fertility rate?
 This page explores the patterns of fertility rate (overall, and just among adolescents) in four Latin American countries: Colombia, Brazil, Argentina, and Mexico.
 
 ## Data Analysis 
-# table?
+![Fertility rates (table format)](figures/fr_tab.png) 
 
 ![Fertility rates (adolescent and overall) across Latin American countries](figures/fertility_rate.png) 
 

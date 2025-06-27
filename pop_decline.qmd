@@ -7,7 +7,7 @@ Which countries have death rates higher than birth rates?
 This page explores the relationship between the birth rate and death rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico.
 
 ## Data Analysis 
-# table?
+![Death rates and birth rates (table format)](figures/pd_tab.png) 
 
 ![Death rates and birth rates across Latin American countries](figures/pop_decline.png) 
 

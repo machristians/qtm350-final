@@ -7,7 +7,7 @@ Do more urbanized countries experience higher population growth?
 This page explores the relationship between the urbanization rate and population growth rate in four Latin American countries: Colombia, Brazil, Argentina, and Mexico. It compares how different levels of urban development may lead to differences in population growth.
 
 ## Data Analysis 
-# table?
+![Population growth (table format)](figures/pg_tab.png) 
 
 ![Population growth rates across Latin American countries](figures/pop_growth.png) 
 
