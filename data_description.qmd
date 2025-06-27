@@ -1,9 +1,0 @@
----
-title: "Data Description"
----
-
-## Codebook
-
-### insert table of codebook here
-
-There is no entity-relationship diagram because we did not need to merge any tables.
