@@ -1,6 +1,10 @@
 ---
 title: "Conclusion"
 ---
+In Conclusion, 
 
-## Conclusion 
-In Conclusion, ....
+Across all four countries analyzed, birth rates exceed death rates, with Mexico showing the highest natural population growth and Argentina the lowest. Urbanization appears inversely related to growth—Mexico and Colombia, with lower urban populations, have higher growth rates, while Brazil and Argentina show the opposite.
+
+Colombia stands out with a notably high adolescent fertility rate relative to its overall fertility rate, suggesting early-age childbirth is more common. Additionally, Brazil shows a higher child mortality rate than the others, signaling potential health or socioeconomic concerns.
+
+Overall, despite the limited sample size, distinct demographic patterns emerge, highlighting significant regional disparities in growth, urbanization, and health outcomes.

@@ -1,0 +1,15 @@
+Variable Name ,Description ,Type ,Values & Labels 
+country ,Name of the country,String ,
+population_density ,Number of people per square km,Float ,People/km²
+under_5_mortality_rate ,"Deaths of children under 5 per 1,000",Float ,"Per 1,000 live births"
+net_migration,Net number of migrants,Float ,People
+adolescent_fertility_rate ,"Births per 1,000 women ages 15–19",Float ,"Per 1,000 women"
+birth_rate ,"Births per 1,000 people",Float ,"Per 1,000 people"
+death_rate ,"Deaths per 1,000 people",Float ,"Per 1,000 people"
+infant_mortality_rate,"Deaths of infants under 1 per 1,000",Float ,"Per 1,000 live births"
+life_expectancy ,Average expected lifespan,Float ,Years 
+fertility_rate ,Average number of children per woman,Float ,Children per woman
+population_growth ,Annual population growth rate,Float ,% growth
+total_population ,Total population ,Float ,People
+rural_population_percent ,Percent of people in rural areas,Float ,% of population 
+urban_population_percent ,Percent of people in urban areas,Float ,% of population 
